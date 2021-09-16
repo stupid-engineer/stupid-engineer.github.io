@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Maven二十分钟快速教程 | 愚工</title>
+  <meta name="keywords" content=" Maven ">
+  <meta name="description" content="Maven二十分钟快速教程 | 愚工">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="页面未找到！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="https://stupid-engineer.github.io/404/">
+<meta property="og:site_name" content="愚工">
+<meta property="og:description" content="页面未找到！">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-14T21:41:06.000Z">
+<meta property="article:modified_time" content="2021-09-14T21:42:27.841Z">
+<meta property="article:author" content="愚工">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/brown-paper.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="false" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>愚工</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/stupid-engineer"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:jinguo_cn@foxmail.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(1)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="攻城术">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        攻城术
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="攻城术<--->开发工具">
+                                        
+                                        开发工具
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  site_url"
+               
+               href="/about">关于</a>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="1">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Maven</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 攻城术 开发工具 "
+           href="/2021/09/16/Maven%E4%BA%8C%E5%8D%81%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B/"
+           data-tag="Maven"
+           data-author="" >
+            <span class="post-title" title="Maven二十分钟快速教程">Maven二十分钟快速教程</span>
+            <span class="post-date" title="2021-09-16 17:21:30">2021/09/16</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Maven二十分钟快速教程" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Maven二十分钟快速教程</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="攻城术">攻城术</a> > 
+            
+            <a  data-rel="攻城术&lt;---&gt;开发工具">开发工具</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">Maven</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-09-16 18:06:49'>2021-09-16 17:21</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Maven-%E5%9F%BA%E7%A1%80"><span class="toc-text">一、Maven 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E5%B7%A5%E7%A8%8B%E4%B8%8E-pom-xml-%E6%96%87%E4%BB%B6"><span class="toc-text">Maven 工程与 pom.xml 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-pom-xml"><span class="toc-text">最简单的 pom.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E4%BE%9D%E8%B5%96"><span class="toc-text">引入依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E4%BC%A0%E9%80%92"><span class="toc-text">依赖传递</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E6%8E%92%E9%99%A4"><span class="toc-text">依赖排除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E3%80%81%E9%98%B6%E6%AE%B5%E4%B8%8E%E6%8F%92%E4%BB%B6"><span class="toc-text">二、生命周期、阶段与插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B6%E6%AE%B5-phase"><span class="toc-text">阶段(phase)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%98%B6%E6%AE%B5"><span class="toc-text">执行生命周期阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8E%E6%8F%92%E4%BB%B6"><span class="toc-text">生命周期与插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%8F%92%E4%BB%B6%E7%9B%AE%E6%A0%87"><span class="toc-text">执行插件目标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E6%8F%92%E4%BB%B6%E7%9A%84%E7%9B%AE%E6%A0%87%E7%BB%91%E5%AE%9A%E5%88%B0%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%A4%BA%E4%BE%8B"><span class="toc-text">将插件的目标绑定到生命周期示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E5%86%85%E7%BD%AE%E6%8F%92%E4%BB%B6"><span class="toc-text">Maven 内置插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6"><span class="toc-text">配置插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-text">常用插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6"><span class="toc-text">自定义插件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A1%B9%E7%9B%AE%E7%BB%A7%E6%89%BF"><span class="toc-text">三、项目继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%A4%9A%E9%A1%B9%E7%9B%AE%E5%90%88%E6%88%90"><span class="toc-text">四、多项目合成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BB%93%E5%BA%93%E4%B8%8E%E9%95%9C%E5%83%8F"><span class="toc-text">五、仓库与镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-text">本地仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%95%9C%E5%83%8F"><span class="toc-text">镜像</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Maven-%E5%9F%BA%E7%A1%80"><span class="toc-text">一、Maven 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E5%B7%A5%E7%A8%8B%E4%B8%8E-pom-xml-%E6%96%87%E4%BB%B6"><span class="toc-text">Maven 工程与 pom.xml 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-pom-xml"><span class="toc-text">最简单的 pom.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E4%BE%9D%E8%B5%96"><span class="toc-text">引入依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E4%BC%A0%E9%80%92"><span class="toc-text">依赖传递</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E6%8E%92%E9%99%A4"><span class="toc-text">依赖排除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E3%80%81%E9%98%B6%E6%AE%B5%E4%B8%8E%E6%8F%92%E4%BB%B6"><span class="toc-text">二、生命周期、阶段与插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B6%E6%AE%B5-phase"><span class="toc-text">阶段(phase)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%98%B6%E6%AE%B5"><span class="toc-text">执行生命周期阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8E%E6%8F%92%E4%BB%B6"><span class="toc-text">生命周期与插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%8F%92%E4%BB%B6%E7%9B%AE%E6%A0%87"><span class="toc-text">执行插件目标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E6%8F%92%E4%BB%B6%E7%9A%84%E7%9B%AE%E6%A0%87%E7%BB%91%E5%AE%9A%E5%88%B0%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%A4%BA%E4%BE%8B"><span class="toc-text">将插件的目标绑定到生命周期示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E5%86%85%E7%BD%AE%E6%8F%92%E4%BB%B6"><span class="toc-text">Maven 内置插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6"><span class="toc-text">配置插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-text">常用插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6"><span class="toc-text">自定义插件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A1%B9%E7%9B%AE%E7%BB%A7%E6%89%BF"><span class="toc-text">三、项目继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%A4%9A%E9%A1%B9%E7%9B%AE%E5%90%88%E6%88%90"><span class="toc-text">四、多项目合成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BB%93%E5%BA%93%E4%B8%8E%E9%95%9C%E5%83%8F"><span class="toc-text">五、仓库与镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-text">本地仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%95%9C%E5%83%8F"><span class="toc-text">镜像</span></a></li></ol></li></ol></div></p>
+<h3 id="一、Maven-基础"><a href="#一、Maven-基础" class="headerlink" title="一、Maven 基础"></a>一、Maven 基础</h3><blockquote>
+<p>坦率的说我不太喜欢maven 这个工具，觉得它有点过度设计，我也是被潮流挟裹着学习，写这篇文章主要是自己作个总结，顺便也帮助下他人。<br>Maven 的简介、安装、项目结构、HelloWorld，与 IDE 集成等请参考其他教程，本教程主要讲解 Maven 的基本概念。</p>
+</blockquote>
+<h4 id="Maven-工程与-pom-xml-文件"><a href="#Maven-工程与-pom-xml-文件" class="headerlink" title="Maven 工程与 pom.xml 文件"></a>Maven 工程与 pom.xml 文件</h4><p>一个软件项目是一个工程，如果项目很庞大，可以将项目拆分成多个模块，每一个模块又是一个工程，这就是父子工程结构。Maven 工程的描述文件是 pom.xml 文件，pom.xml 文件位于 Maven 工程文件夹根目录下，Maven 工程与 pom.xml 文件是一一对应的。</p>
+<h4 id="最简单的-pom-xml"><a href="#最简单的-pom-xml" class="headerlink" title="最简单的 pom.xml"></a>最简单的 pom.xml</h4><p>打开任何一个 Maven 工程的 pom.xml，都可以看到有类似</p>
+<pre><code>&lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+&lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+&lt;version&gt;1.2.7&lt;/version&gt;
+</code></pre>
+<p>这样的三行配置，这三行是必需有的，其意义如下：</p>
+<ul>
+<li>groupId： 组织的标识，一般是公司或组织域名</li>
+<li>artifactId：项目的标识，一般是工程名称</li>
+<li>version：项目的版本号</li>
+</ul>
+<p>Maven 通过 groupId、artifactId、version 这三个属性就能唯一确定一个 Maven 项目，这三个属性称为 <strong>Maven 工程的坐标</strong>。常见的开源项目的坐标可以在 <a target="_blank" rel="noopener" href="https://mvnrepository.com/">mvnrepository</a> 搜索。</p>
+<p>接下来会看到</p>
+<p><code>&lt;packaging&gt;jar&lt;/packaging&gt;</code></p>
+<p>packaging：指定项目的打包方式常见的有</p>
+<ul>
+<li>jar: 指定工程打包成 jar 文件。</li>
+<li>war: 指定工程打包成 war 文件。</li>
+<li>pom: 指定这是一个 Maven 父工程，可以被子工程继承。</li>
+<li>maven-plugin: 指定工程打包成 Maven 插件。</li>
+</ul>
+<p>当省略该行时默认为 jar。</p>
+<h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><p>如果你的 Maven 项目需要引用第三方 jar 包，那么需要在 pom.xml 中引入该 jar 包的坐标，引用自定义的 maven 工程也需要在 pom.xml 中引入该工程的坐标， 这称为引入依赖。<br>例如在<code>&lt;dependencies&gt;</code>标签下加入如下配置后</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+    &lt;version&gt;4.1.4.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>即可为你的项目引入 spring-context-4.1.8.RELEASE.jar 依赖。<br><code>&lt;dependencies&gt;</code>标签下可以包含一个或多个 dependency 元素，以声明一个或多个项目依赖。</p>
+<h4 id="依赖传递"><a href="#依赖传递" class="headerlink" title="依赖传递"></a>依赖传递</h4><p>引入<code>spring-core-4.1.8.RELEASE.jar</code>的依赖后，Maven 引入的 jar 包不仅仅只有<code>spring-context-4.1.8.RELEASE.jar</code>，还会有<code>spring-context-4.1.8.RELEASE.jar</code>依赖的<code>spring-core-4.1.8.RELEASE.jar</code>，还会有<code>spring-core-4.1.8.RELEASE.jar</code>依赖的 <code>commons-logging-1.2.jar</code>，依赖关系不断传递，直至没有依赖为止。</p>
+<p>有时我们的项目会出现模块循环依赖的情况 ​，于是在构建时 Maven 就会提示失败 ​。这是因为 Maven 编译项目前要分析依赖关系，确定模块的编译顺序，如果出现循环依赖 ​Maven 就无法确定哪个模块该先编译了，所以我们需要谨慎设计模块的依赖关系。</p>
+<h4 id="依赖排除"><a href="#依赖排除" class="headerlink" title="依赖排除"></a>依赖排除</h4><p>依赖传递有时会造成 jar 包冲突，这时我们需要排除掉不需要的 jar 包依赖。<br>例如排除 commons-logging 的依赖</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+    &lt;version&gt;4.1.8.RELEASE&lt;/version&gt;
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;commons-logging&lt;/groupId&gt;
+            &lt;artifactId&gt;commons-logging&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>pom.xml 中<code>&lt;properties&gt;</code>标签下可以定义属性，Maven 也有许多内置属性，属性可以在其他地方用<code>$&#123;属性名&#125;</code>进行引用。<br>属性示例</p>
+<pre><code>&lt;properties&gt;
+    &lt;!-- 定义属性 --&gt;
+    &lt;springframework.version&gt;4.1.8.RELEASE&lt;/springframework.version&gt;
+&lt;/properties&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+        &lt;!-- 引用属性 --&gt;
+        &lt;version&gt;$&#123;springframework.version&#125;&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<p>内置属性例如<code>$&#123;basedir&#125;</code> 表示项目根目录，即包含 pom.xml 文件的目录，具体内置属性请参阅其他资料。</p>
+<h3 id="二、生命周期、阶段与插件"><a href="#二、生命周期、阶段与插件" class="headerlink" title="二、生命周期、阶段与插件"></a>二、生命周期、阶段与插件</h3><h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>来自软件工程的概念，Maven 对软件构建过程进行抽象。包含了项目的清理、初始化、编译、测试、打包、集成测试、验证、部署和文档生成等几乎所有的构建步骤。Maven 有三个相互独立的生命周期，分别是 clean、default 和 site。</p>
+<ul>
+<li>clean 构建之前进行一些清理工作。</li>
+<li>default 是构建的核心部分，编译，测试，打包，部署等等，</li>
+<li>site 生成项目报告，站点，发布站点，站点的文档。</li>
+</ul>
+<h4 id="阶段-phase"><a href="#阶段-phase" class="headerlink" title="阶段(phase)"></a>阶段(phase)</h4><p>每个生命周期又包含了多个阶段，这些阶段在执行的时候是有固定顺序的，后面的阶段一定要等前面的阶段执行完成后才能被执行。</p>
+<p>三种生命周期与阶段的顺序<br>clean</p>
+<ul>
+<li>pre-clean</li>
+<li>clean 清理项目</li>
+<li>post-clean</li>
+</ul>
+<p>default</p>
+<ul>
+<li>validate 验证项目是否正确，以及所有为了完整构建必要的信息是否可用</li>
+<li>generate-sources 生成所有需要包含在编译过程中的源代码</li>
+<li>process-sources 处理源代码，比如过滤一些值</li>
+<li>generate-resources 生成所有需要包含在打包过程中的资源文件</li>
+<li>process-resources 复制并处理资源文件至目标目录，准备打包</li>
+<li>compile 编译项目的源代码</li>
+<li>process-classes 后处理编译生成的文件，例如对 Java 类进行字节码增强（bytecode enhancement）</li>
+<li>generate-test-sources 生成所有包含在测试编译过程中的测试源码</li>
+<li>process-test-sources 处理测试源码，比如过滤一些值</li>
+<li>generate-test-resources 生成测试需要的资源文件</li>
+<li>process-test-resources 复制并处理测试资源文件至测试目标目录</li>
+<li>test-compile 编译测试源码至测试目标目录</li>
+<li>test 使用合适的单元测试框架运行测试。这些测试应该不需要代码被打包或发布</li>
+<li>prepare-package 在真正的打包之前，执行一些准备打包必要的操作。这通常会产生一个包的展开的处理过的版本（将会在 Maven 2.1+中实现）</li>
+<li>package 将编译好的代码打包成可分发的格式，如 JAR，WAR，或者 EAR</li>
+<li>pre-integration-test 执行一些在集成测试运行之前需要的动作。如建立集成测试需要的环境</li>
+<li>integration-test 如果有必要的话，处理包并发布至集成测试可以运行的环境</li>
+<li>post-integration-test 执行一些在集成测试运行之后需要的动作。如清理集成测试环境。</li>
+<li>verify 执行所有检查，验证包是有效的，符合质量规范</li>
+<li>install 安装包至本地仓库，以备本地的其它项目作为依赖使用</li>
+<li>deploy 复制最终的包至远程仓库，共享给其它开发人员和项目（通常和一次正式的发布相关）</li>
+</ul>
+<p>site</p>
+<ul>
+<li>pre-site</li>
+<li>site ：生成项目的站点文档；</li>
+<li>post-site</li>
+<li>site-deploy ：发布生成的站点文档</li>
+</ul>
+<h4 id="执行生命周期阶段"><a href="#执行生命周期阶段" class="headerlink" title="执行生命周期阶段"></a>执行生命周期阶段</h4><p>maven 命令总会对应于一个特定的阶段，比如运行<code>mvn clean</code>就是执行 clean 生命周期的 clean 阶段,<code>mvn package</code>就是执行 defalut 生命周期的 package 阶段。</p>
+<h4 id="生命周期与插件"><a href="#生命周期与插件" class="headerlink" title="生命周期与插件"></a>生命周期与插件</h4><p>Maven 的生命周期是抽象的，阶段也是抽象的，实际需要插件来执行任务，Maven 本质上是一个插件框架，它的核心并不执行任何具体的构建任务，所有这些任务都交给插件来完成。一个插件通常可以完成多个任务，每一个任务就叫做插件的一个**目标(goal)**。</p>
+<h4 id="执行插件目标"><a href="#执行插件目标" class="headerlink" title="执行插件目标"></a>执行插件目标</h4><ol>
+<li>通过将插件的 goal 绑定到生命周期的具体阶段，再执行 maven 的生命周期阶段，如<code>mvn package</code>。</li>
+<li>直接在命令行以 <code>mvn &lt;插件名称|前缀&gt;:&lt;目标&gt; [-D参数名=参数值 ...]</code>的形式执行插件目标，例如<code>mvn archetype:generate</code>就表示调用 maven-archetype-plugin 的 generate 目标，这种方式与生命周期无关。</li>
+</ol>
+<h4 id="将插件的目标绑定到生命周期示例"><a href="#将插件的目标绑定到生命周期示例" class="headerlink" title="将插件的目标绑定到生命周期示例"></a>将插件的目标绑定到生命周期示例</h4><pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;!-- 要绑定的插件 --&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-source-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.2.1&lt;/version&gt;
+            &lt;executions&gt;
+                &lt;execution&gt;
+                    &lt;id&gt;attach-source&lt;/id&gt;
+                    &lt;!-- 要绑定到的生命周期的阶段 --&gt;
+                    &lt;phase&gt;package&lt;/phase&gt;
+                    &lt;goals&gt;
+                        &lt;!-- 要绑定的插件的目标 --&gt;
+                        &lt;goal&gt;jar-no-fork&lt;/goal&gt;
+                    &lt;/goals&gt;
+                &lt;/execution&gt;
+            &lt;/executions&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<h4 id="Maven-内置插件"><a href="#Maven-内置插件" class="headerlink" title="Maven 内置插件"></a>Maven 内置插件</h4><p>Maven 已经默认将很多核心插件绑定到对应的阶段，用户几乎不用配置就能构建 Maven 项目。<img src="/img/20113751-9611dd1eae93a1bd.jpg" alt="默认插件"></p>
+<h4 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h4><p>插件的参数在<code>&lt;configuration&gt;</code>标签下配置。<br>compiler 插件配置示例：</p>
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.1&lt;/version&gt;
+            &lt;!-- 该插件的整体配置，各个目标均使用该配置 --&gt;
+            &lt;configuration&gt;
+                &lt;!-- 源代码使用的JDK版本 --&gt;
+                &lt;source&gt;1.8&lt;/source&gt;
+                &lt;!-- 生成的目标class文件的编译版本 --&gt;
+                &lt;target&gt;1.8&lt;/target&gt;
+                &lt;!-- 字符集编码 --&gt;
+                &lt;encoding&gt;UTF-8&lt;/encoding&gt;
+                &lt;!-- 跳过测试 --&gt;
+                &lt;skipTests&gt;true&lt;/skipTests&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<h4 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h4><p>常用的 maven 插件可以在<a target="_blank" rel="noopener" href="http://maven.apache.org/plugins/index.html">插件仓库</a>中搜索坐标。</p>
+<p><strong>maven-antrun-plugin</strong></p>
+<ul>
+<li>antrun:run 能让用户在 Maven 项目中运行 Ant 任务</li>
+</ul>
+<p><strong>maven-compiler-plugin</strong></p>
+<ul>
+<li>compiler:compile 编译位于 src/main/java/目录下的源码</li>
+<li>compiler:testCompile 编译位于 src/test/java/目录下的测试源码</li>
+</ul>
+<p><strong>maven-source-plugin</strong></p>
+<ul>
+<li>source:jar 打包源代码</li>
+</ul>
+<p><strong>maven-dependency-plugin</strong></p>
+<ul>
+<li>dependency:list 能够列出项目最终解析到的依赖列表</li>
+<li>dependency:tree 能进一步的描绘项目依赖树</li>
+<li>dependency:analyze 可以告诉你项目依赖潜在的问题</li>
+<li>dependency:copy-dependencies 能将项目依赖从本地 Maven 仓库复制到某个特定的文件夹下面</li>
+</ul>
+<p><strong>exec-maven-plugin</strong></p>
+<ul>
+<li>exec:exec 运行一个 Maven 外部的程序，该插件还允许你配置相关的程序运行参数。</li>
+<li>exec:java 该目标要求你提供一个 mainClass 参数，然后它能够利用当前项目的依赖作为 classpath，在同一个 JVM 中运行该 mainClass。</li>
+</ul>
+<h4 id="自定义插件"><a href="#自定义插件" class="headerlink" title="自定义插件"></a>自定义插件</h4><ol>
+<li>创建 maven 项目，修改 pom.xml 中的打包方式<code>&lt;packaging&gt;maven-plugin&lt;/packaging&gt;</code></li>
+<li>引入 maven-plugin-api</li>
+</ol>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.maven&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-plugin-api&lt;/artifactId&gt;
+        &lt;version&gt;3.5.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.maven.plugin-tools&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-plugin-annotations&lt;/artifactId&gt;
+        &lt;version&gt;3.5.0&lt;/version&gt;
+        &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<ol start="3">
+<li>编写插件目标类 Mojo</li>
+</ol>
+<pre><code>/**
+ * 继承AbstractMojo、实现execute()方法
+ * 注解设置目标名称,默认阶段。
+ */
+@Mojo(name = &quot;demoGoal&quot;,defaultPhase = LifecyclePhase.PACKAGE)
+public class DemoGoalMojo  extends AbstractMojo &#123;
+
+    // 插件的配置参数。
+    @Parameter
+    private String msg;
+
+    @Parameter
+    private List&lt;String&gt; options;
+
+    public void execute() throws MojoExecutionException,MojoFailureException&#123;
+        String info = String.format(&quot;外部传递来的参数 msg: [ %s ]&quot;, msg);
+        getLog().info(info);
+        System.out.println(&quot;options:&quot;+ options);
+    &#125;
+
+&#125;
+</code></pre>
+<ol start="4">
+<li>使用<code>mvn install</code>命令安装插件</li>
+<li>在其他项目中使用插件</li>
+</ol>
+<pre><code>  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;sample.plugin&lt;/groupId&gt;
+        &lt;artifactId&gt;hello-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+</code></pre>
+<h3 id="三、项目继承"><a href="#三、项目继承" class="headerlink" title="三、项目继承"></a>三、项目继承</h3><p>一个大型项目一般有多个子项目，为了消除重复或方便统一管理版本号、依赖、属性等，可以把相同的配置抽取出来放入父项目，子项目再继承父项目就可以使用父项目中的配置，形成层次化的项目关系。</p>
+<p>zookeeper 父子项目示例</p>
+<ol>
+<li>父项目，打包类型必须为 POM，不需要<code>src/main/java</code>、<code>src/test/java</code>等目录。</li>
+</ol>
+<pre><code>&lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+&lt;artifactId&gt;parent&lt;/artifactId&gt;
+&lt;packaging&gt;pom&lt;/packaging&gt;
+&lt;version&gt;3.6.0-SNAPSHOT&lt;/version&gt;
+</code></pre>
+<ol start="2">
+<li>子项目一</li>
+</ol>
+<pre><code>&lt;parent&gt;
+    &lt;!-- parent的坐标 --&gt;
+    &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+    &lt;artifactId&gt;parent&lt;/artifactId&gt;
+    &lt;version&gt;3.6.0-SNAPSHOT&lt;/version&gt;
+    &lt;!-- 指明parent的目录，该配置可以不需要 --&gt;
+    &lt;relativePath&gt;..&lt;/relativePath&gt;
+&lt;/parent&gt;
+
+&lt;!-- 子项目坐标，可以不声明groupId和version,默认继承parent的 --&gt;
+&lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+&lt;artifactId&gt;zookeeper&lt;/artifactId&gt;
+&lt;packaging&gt;jar&lt;/packaging&gt;
+</code></pre>
+<ol start="3">
+<li>子项目二</li>
+</ol>
+<pre><code>&lt;parent&gt;
+    &lt;!-- parent的坐标 --&gt;
+    &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+    &lt;artifactId&gt;parent&lt;/artifactId&gt;
+    &lt;version&gt;3.6.0-SNAPSHOT&lt;/version&gt;
+    &lt;!-- 指明parent的目录，该配置可以不需要 --&gt;
+    &lt;relativePath&gt;..&lt;/relativePath&gt;
+&lt;/parent&gt;
+
+&lt;!-- 子项目坐标，可以不声明groupId和version,默认继承parent的 --&gt;
+&lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+&lt;artifactId&gt;zookeeper-client&lt;/artifactId&gt;
+&lt;packaging&gt;pom&lt;/packaging&gt;
+</code></pre>
+<ol start="4">
+<li>孙项目</li>
+</ol>
+<pre><code>&lt;parent&gt;
+    &lt;!-- parent是子项目二 --&gt;
+    &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+    &lt;artifactId&gt;zookeeper-client&lt;/artifactId&gt;
+    &lt;version&gt;3.6.0-SNAPSHOT&lt;/version&gt;
+    &lt;!-- 指明parent的目录，该配置可以不需要 --&gt;
+    &lt;relativePath&gt;..&lt;/relativePath&gt;
+&lt;/parent&gt;
+
+&lt;!-- 子项目坐标，版本号继承parent的 --&gt;
+&lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+&lt;artifactId&gt;zookeeper-client-c&lt;/artifactId&gt;
+&lt;packaging&gt;jar&lt;/packaging&gt;
+</code></pre>
+<h3 id="四、多项目合成"><a href="#四、多项目合成" class="headerlink" title="四、多项目合成"></a>四、多项目合成</h3><p>一个大型项目一般有多个子项目，也叫做多模块项目，或者合成项目，合成机制允许我们在父项目中执行生命周期指令后该指令能传递给每一个子项目。合成的目的是为了快速构建项目，继承是为了消除重复或方便统一管理，合成只需在父项目中配置。</p>
+<p>zookeeper 项目合成示例：</p>
+<pre><code>&lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+&lt;artifactId&gt;parent&lt;/artifactId&gt;
+&lt;packaging&gt;pom&lt;/packaging&gt;
+&lt;version&gt;3.6.0-SNAPSHOT&lt;/version&gt;
+
+&lt;!-- 指定需要合成的子项目 --&gt;
+&lt;modules&gt;
+    &lt;module&gt;zookeeper-docs&lt;/module&gt;
+    &lt;module&gt;zookeeper-jute&lt;/module&gt;
+    &lt;module&gt;zookeeper-server&lt;/module&gt;
+    &lt;module&gt;zookeeper-metrics-providers&lt;/module&gt;
+    &lt;module&gt;zookeeper-client&lt;/module&gt;
+    &lt;module&gt;zookeeper-recipes&lt;/module&gt;
+    &lt;module&gt;zookeeper-assembly&lt;/module&gt;
+&lt;/modules&gt;
+</code></pre>
+<p>当在 parent 项目根目录下执行<code>mvn install</code>后，命名会传递给所有子项目，相当于在所有子项目下都执行了<code>mvn install</code>指令。</p>
+<h3 id="五、仓库与镜像"><a href="#五、仓库与镜像" class="headerlink" title="五、仓库与镜像"></a>五、仓库与镜像</h3><h4 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h4><p>是本地计算机上的一个文件夹，本地仓库会缓存远程仓库的构件。windows 默认是 <code>C:\Users\用户名\.m2\repository</code>目录，可以进入<code>C:\Users\用户名\.m2\settings.xml</code>文件中修改位置<br><code>&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</code></p>
+<h4 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h4><p>顾名思义就是网络上的仓库，网上一些教程把远程仓库分类成什么中央仓库、私服、其它公共仓库的，其实他们本质上一样。Maven 社区提供的远程仓库叫中央仓库，软件开发组织在内部网络搭建的私有 Maven 仓库服务器这叫私服，某些有实力的组织将自己的私有仓库向互联网开放这叫其它公共仓库。</p>
+<p>为了加快构件的下载速度或方便管理私有项目，软件开发组织一般都会搭建 Maven 私服，私有项目的构件可以部署到私服上供内部其他项目引用。没有私服的时候也可以使用阿里云仓库 <code>http://maven.aliyun.com/nexus/content/groups/public/</code>。</p>
+<p>仓库检索优先级规则：本地仓库优先级最高，当在本地仓库中找不到构件时 Maven 会去远程仓库中找，远程仓库依据配置文件中的<code>&lt;repository&gt;</code>标签中的顺序形成一个仓库列表，而中央仓库排在列表的最后面，所以中央仓库的优先级最低。</p>
+<p>远程仓库配置示例</p>
+<pre><code>&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;spring-milestones&lt;/id&gt;
+        &lt;name&gt;Spring Milestones&lt;/name&gt;
+        &lt;url&gt;https://repo.spring.io/milestone&lt;/url&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;false&lt;/enabled&gt;
+        &lt;/snapshots&gt;
+    &lt;/repository&gt;
+    &lt;repository&gt;
+        &lt;id&gt;alibaba&lt;/id&gt;
+        &lt;name&gt;ali Milestones&lt;/name&gt;
+        &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;false&lt;/enabled&gt;
+        &lt;/snapshots&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+</code></pre>
+<h4 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h4><p>镜像表示两个远程仓库之间的关系，如果仓库 X 可以提供仓库 Y 存储的内容，那么就可以认为 X 是 Y 的一个镜像。由于地理位置的原因，国内镜像服务器的速度一般比中央仓库快，我们可以通过 settings.xml 配置文件设置镜像关系。镜像相当于一个拦截器，它会拦截去往被镜像的远程服务器的相关请求，把请求重定向到镜像服务器上。由于镜像仓库完全屏蔽了被镜像仓库，当镜像仓库不稳定或者停止服务的时候，Maven 无法访问被镜像仓库，因此无法下载构件。实际工作中，镜像常见的用法是让私服充当其他远程仓库的镜像，这样对远程仓库的访问就导向到了私服上。如果镜像仓库需要登录认证，则需要配置 setting.xml 中的<code>&lt;server&gt;</code>标签。<br>配置镜像示例</p>
+<pre><code>&lt;!-- 阿里云仓库充当central仓库的镜像 --&gt;
+&lt;mirror&gt;
+    &lt;id&gt;alimaven&lt;/id&gt;
+    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+    &lt;name&gt;aliyun maven&lt;/name&gt;
+    &lt;url&gt;http://maven.aliyun.com/nexus/content/repositories/central/&lt;/url&gt;
+&lt;/mirror&gt;
+</code></pre>
+<p>本教程的目的是快速上手，更详细的配置请参阅其他资料。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出文章中任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jinguo_cn@foxmail.com </span>
+    </div>
+</article>
+
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'b410c2c40f672c790423',
+            clientSecret: '3ebb10161eac1446c6b2a7485ec13dd8af38c375',
+            repo: 'stupid-engineer.github.io',
+            owner: 'stupid-engineer',
+            admin: ['stupid-engineer'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2021-2021 愚工
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #616161;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
